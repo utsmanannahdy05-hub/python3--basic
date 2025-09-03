@@ -1,0 +1,42 @@
+print("materi 9c - python function")
+print("<<<<<<< >>>>>>>")
+# def -> fungsi lebih dari 1 baris 
+def halo_dek(nama):
+  print(f"apa kabar dek {nama}")
+  print("---------")
+ # lambda   fungsi anonim yg satu baris saja 
+halo_kak = lambda nama:print(f"halo kak {nama}")
+# lambda tdk akn berguna jika tdk di panggil
+halo_dek("nezuko")
+halo_dek("anya")
+halo_kak("bilal")
+halo_kak("utsman")
+
+
+# higher order function  (map,sorted,filter)
+uang_jajan = [100000, 200000, 100000, 500000, 75000] 
+# map() -> mentransformasi data item 
+kurangi_jajan = map(lambda uang:uang - 5000, uang_jajan)
+list_kurangi_jajan = list(kurangi_jajan)
+print(f"uang jajan {uang_jajan}")
+print(f"kurangi uang jajan: {list_kurangi_jajan}")
+
+# sorted() -> mengurutkan data 
+urutkan_uang = sorted(uang_jajan)
+balik_uang = sorted(uang_jajan, reverse=True)
+print(f"urutkan uang: {urutkan_uang}")
+print(f"urutkan uang terbali: {balik_uang}")
+
+# filter () -> menyaring data sesuai kondisi
+filter_uang_gede = filter(lambda uang:uang>50000, uang_jajan) 
+list_uang_gede =list(filter_uang_gede)
+print(f"filter uang gede: {list_uang_gede}")
+ 
+import random
+import doa
+# cara akses dgn melakukan import [nama-module]
+# lalu cara panggil dgn [nama_module].[nama_fungsi]
+coba_doa = doa.doa_sebelum_makan()
+-print(f"cobain angka: {coba_doa} ")
+acak_angka = random.randint(50,100)
+print(f"acak angka {acak_angka}")
